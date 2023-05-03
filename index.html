@@ -128,12 +128,12 @@
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="assets/img/hero-carousel/hero-carousel-3.svg" class="img-fluid animated">
+      <img src="assets/img/hero-carousel/hero-carousel-3.svg" alt="" class="img-fluid animated">
       <h2>Welcome to <span>Poura11y</span></h2>
       <p>Et voluptate esse accusantium accusamus natus reiciendis quidem voluptates similique aut.</p>
       <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+        <a href="#about" class="btn-get-started scrollto">Get Started With Accessibility</a>
+        <!--TBD <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
       </div>
     </div>
   </section>
@@ -204,11 +204,14 @@
             <h3 class="pt-0 pt-lg-5">Neque officiis dolore maiores et exercitationem quae est seda lidera pat claero</h3>
 
             <!-- Tabs -->
-            <ul class="nav nav-pills mb-3">
-              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Saepe fuga</a></li>
-              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Voluptates</a></li>
-              <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Corrupti</a></li>
-            </ul><!-- End Tabs -->
+            <div role="tabpanel">
+              <ul class="nav nav-pills mb-3" role="tablist">
+                <button class="nav-link active" data-bs-toggle="pill" href="#tab1">Saepe fuga</button>
+                <button class="nav-link" data-bs-toggle="pill" href="#tab2" >Voluptates</button>
+                <button class="nav-link" data-bs-toggle="pill" href="#tab3" >Corrupti</button>
+              </ul>
+            </div>
+            <!-- End Tabs -->
 
             <!-- Tab Content -->
             <div class="tab-content">
@@ -347,7 +350,7 @@
           </div>
           <div class="col-lg-6">
             <div class="content d-flex flex-column justify-content-center h-100">
-              <h3>Voluptatem dignissimos provident quasi corporis</h3>
+              <h3 id="h3-it">Voluptatem dignissimos provident quasi corporis</h3>
               <p class="fst-italic">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua.
@@ -357,7 +360,7 @@
                 <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
                 <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
               </ul>
-              <a href="#" class="read-more align-self-start"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+              <a href="#" id="rm" aria-label="Read More About" aria-labelledby="rm h3-it" class="read-more align-self-start"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -1252,9 +1255,12 @@
 
       </div>
 
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-      </div><!-- End Google Maps -->
+
+      <!-- Start of map ommited for now 
+        <div class="map">
+        <iframe src="" 
+      </div>
+      End Google Maps -->
 
       <div class="container">
 
