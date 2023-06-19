@@ -18,12 +18,13 @@
 
 a {
   color: var(--color-links);
-  text-decoration: none;
+  text-decoration: none !important;
 }
+
 
 a:hover {
   color: var(--color-links-hover);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 h1,
@@ -3097,6 +3098,7 @@ section {
   color: rgba(var(--color-white-rgb), 0.7);
   transition: 0.3s;
   display: inline-block;
+  text-decoration: underline !important;
   line-height: 1;
 }
 
@@ -3169,6 +3171,7 @@ section {
   width: 36px;
   height: 36px;
   transition: 0.3s;
+  text-decoration: underline !important;
 }
 
 .footer .footer-legal .social-links a:hover {
