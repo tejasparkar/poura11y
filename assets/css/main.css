@@ -1157,7 +1157,7 @@ section {
   font-size: 18px;
   font-weight: 400;
   color: var(--color-secondary);
-  padding: 12px 0;
+  padding: 10px;
   margin-bottom: -2px;
   border-radius: 0;
   font-family: var(--font-secondary);
@@ -1165,8 +1165,8 @@ section {
 
 .about .nav-link.active {
   color: var(--color-primary);
-  background: none;
-  border-bottom: 3px solid var(--color-primary);
+  background: black !important;
+ 
 }
 
 @media (max-width: 575px) {
