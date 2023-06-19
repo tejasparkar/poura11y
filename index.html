@@ -936,7 +936,8 @@ With Validator on Demand, you can rest assured that accessibility is being imple
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="" method="post" role="form" class="php-email-form" id="frmContact"> 
+              <!-- action="forms/contact.php" -->
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -1085,6 +1086,39 @@ With Validator on Demand, you can rest assured that accessibility is being imple
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
   </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+     
+    // Paste the code from Firebase
+    const firebaseConfig = {
+      authDomain: "poura11y-7b6b2.firebaseapp.com",
+      projectId: "poura11y-7b6b2",
+      storageBucket: "poura11y-7b6b2.appspot.com",
+      messagingSenderId: "632676237964",
+      appId: "1:632676237964:web:2c7e9b7af792c3d84eb1a9",
+    };
+     
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+     
+    // Get a reference to the database service
+    const db = getDatabase(app);
+     
+    document.getElementById('frmContact').addEventListener('submit', function(e) {
+        e.preventDefault();
+        set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        });
+     
+        alert('Your form is submitted');
+        document.getElementById('frmContact').reset();
+    });
+    </script>
 </body>
 
 </html>
